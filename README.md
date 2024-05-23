@@ -1,8 +1,10 @@
 # create-chrome-extension
+![Static Badge](https://img.shields.io/badge/:badgeContent)
 
-## Create Chrome Extension
+
+## Build Create Chrome Extension Template
 <img src="./assets/logo.png" alt="logo" width="50px"/>
-Node Js CLI tool that auto generates the necessary files and manifest.json for the chrome extension you want to build.
+Node JS CLI tool that auto generates the necessary files for your chrome extension in your <strong>favourite framework</strong>.
 
 
 ## Integrations
