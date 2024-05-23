@@ -24,6 +24,11 @@
   "bin": {
     "create-chrome-extension": "./index.js"
   },
+  "files": [
+    "index.js",
+    "/assets/*",
+    "/utils/*"
+  ],
   "author": "M2K Developments",
   "license": "MIT",
   "bugs": {
