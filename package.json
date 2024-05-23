@@ -1,6 +1,6 @@
 {
   "name": "build-chrome-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node Js CLI tool that auto generates the necessary files and manifest.json for the chrome extension you want to build.",
   "main": "index.js",
   "type": "module",

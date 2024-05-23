@@ -30,7 +30,7 @@ program
 
 
 // Show Title
-console.log(chalk.yellow(figlet.textSync("Create Chrome Ext.", { horizontalLayout: "full" })));
+console.log(chalk.yellow(figlet.textSync("Build Chrome Ext.", { horizontalLayout: "full" })));
 console.log('By', chalk.blueBright('M2K Developments'));
 
 
