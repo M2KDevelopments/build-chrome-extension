@@ -15,7 +15,7 @@
 
 ## Build Create Chrome Extension Template
 <img src="./assets/logo.png" alt="logo" width="50px"/>
-Node JS CLI tool that auto generates the necessary files for your chrome extension in your <strong>favourite framework</strong>.
+Node JS CLI tool that auto generates the necessary files for your Manifest 3 Chrome Extension in your <strong>favourite framework</strong>.
 
 
 ## Integrations
