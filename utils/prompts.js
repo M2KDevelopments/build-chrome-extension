@@ -17,6 +17,7 @@ export const prompts = [
         "message": "Choose an FrameWork:",
         "choices": [
             "Vanilla HTML, CSS and JS",
+            "Vite",
             "React",
             "Vue",
             "Svelte",
@@ -28,8 +29,9 @@ export const prompts = [
     {
         "type": "checkbox",
         "name": "permissions",
-        "message": "Which Permissions do you want to include?",
+        "message": "Which permissions do you want to include?",
         "choices": [
+            "activeTab",
             "alarms",
             "bookmarks",
             "cookies",
@@ -38,8 +40,15 @@ export const prompts = [
             "gcm",
             "notifications",
             "storage",
-            "tabs"
+            "tabs",
+            "unlimitedStorage"
         ]
+    },
+    {
+        "type": "input",
+        "name": "minimum_chrome_version",
+        "message": "Minimum Chrome Version?",
+        "default": "88"
     },
     {
         "type": "confirm",
@@ -59,4 +68,22 @@ export const prompts = [
         "message": "Include Content Security Policy?",
         "default": true
     },
+    {
+        "type": "input",
+        "name": "homepage_url",
+        "message": "Home page url?",
+        "default": ""
+    },
+    {
+        "type": "input",
+        "name": "install",
+        "message": "On Install redirect url?",
+        "default": ""
+    },
+    {
+        "type": "input",
+        "name": "uninstall",
+        "message": "On Uninstall redirect url?",
+        "default": ""
+    }
 ]
