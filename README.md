@@ -24,7 +24,7 @@ Node JS CLI tool that auto generates the necessary files for your Manifest 3 Chr
 
 ## How to use
 ```
-npx create-chrome-extension
+npx build-chrome-extension
 ```
 
 ## Contributing
