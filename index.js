@@ -6,9 +6,10 @@ import chalk from 'chalk';
 import { program } from "commander";
 import inquirer from "inquirer";
 import { prompts } from "./utils/prompts.js";
-import { exec } from 'child_process';
+import { exec, spawn } from 'child_process';
 import fs from 'fs/promises';
 import path, { dirname } from 'path';
+
 
 // Generate string for files
 import { generateManifestFile } from './utils/generate.manifest.js'
@@ -46,16 +47,47 @@ function shellCMD(command) {
     })
 }
 
+function nodeCMD(command, args) {
+    return new Promise((resolve, reject) => {
+        // https://nodejs.org/api/child_process.html#child_processspawncommand-args-options
+        // https://stackoverflow.com/questions/68127183/how-to-get-the-output-of-command-executed-using-child-process-in-nodejs
+        const child = spawn(command, args.split(" "), {
+            shell: true,
+            cwd: process.cwd(),
+            env: process.env,
+            stdio: ['inherit', 'pipe', 'pipe'],
+            encoding: 'utf-8',
+        });
+
+        // Pipe child stdout to process stdout (terminal)...
+        child.stdout.pipe(process.stdout);
+
+        // ...and do something else with the data.
+        // child.stdout.on('data', (data) => null);
+
+        // command ended
+        child.on('close', (code) => resolve(code));
+    })
+}
+
 
 // When cli is done.
 async function done(answers) {
     console.log(chalk.greenBright(`Building, ${answers.name}!`));
-    await shellCMD(`mkdir "${answers.name}"`);
-    await shellCMD(`mkdir "${answers.name}/icons"`);
-    const folder = path.join(process.cwd(), answers.name);
+
+    // Stop if name was not provided
+    if (!answers.name) console.log(chalk.redBright("Please enter a name for you chrome extension"));
+
+    // Declare directory paths
+    const folderName = answers.name.toLowerCase().replace(/\s/gmi, '-');
+    const folder = path.join(process.cwd(), folderName);
     const assets = path.join(__dirname, 'assets')
 
     if (answers.framework === 'Vanilla HTML, CSS and JS') {
+
+        // Create Folders
+        await shellCMD(`mkdir "${folderName}"`);
+        await shellCMD(`mkdir "${folderName}/icons"`);
 
         // Generate Manifes.json
         await fs.writeFile(path.join(folder, 'manifest.json'), generateManifestFile(answers));
@@ -82,12 +114,32 @@ async function done(answers) {
         // Copy logo.png
         await fs.copyFile(path.join(assets, 'favicon.ico'), path.join(folder, 'favicon.ico'), fs.constants.COPYFILE_FICLONE);
 
+
     } else if (answers.framework === "Vite") {
+        await nodeCMD('npx', `create-vite ${folderName}`);
 
-        console.log('Coming Soon to', answers.framework)
+        // Create Folders
+        await shellCMD(`mkdir "${folderName}/public/icons"`);
 
-    } else if (answers.framework) {
-        console.log('Coming Soon to', answers.framework)
+        // Generate Manifes.json
+        await fs.writeFile(path.join(folder, 'public', 'manifest.json'), generateManifestFile(answers));
+
+        // Generate scripts.js
+        if (answers.content) await fs.writeFile(path.join(folder, 'public', 'content.js'), generateContent(answers));
+
+        // Generate scripts.js
+        if (answers.background) await fs.writeFile(path.join(folder, 'public', 'background.js'), generateBackground(answers));
+
+        // Copy logo.png
+        await fs.copyFile(path.join(assets, 'logo.png'), path.join(folder, 'public', 'logo.png'), fs.constants.COPYFILE_FICLONE);
+        await fs.copyFile(path.join(assets, 'logo.png'), path.join(folder, 'public', 'icons', 'logo.png'), fs.constants.COPYFILE_FICLONE);
+
+        // Copy logo.png
+        await fs.copyFile(path.join(assets, 'favicon.ico'), path.join(folder, 'public', 'favicon.ico'), fs.constants.COPYFILE_FICLONE);
+
+
+    } else {
+        console.log('Framework was not chosen');
     }
 }
 

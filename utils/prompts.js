@@ -18,12 +18,6 @@ export const prompts = [
         "choices": [
             "Vanilla HTML, CSS and JS",
             "Vite",
-            "React",
-            "Vue",
-            "Svelte",
-            "Angualar",
-            "Solid",
-            "Htmlx"
         ]
     },
     {
