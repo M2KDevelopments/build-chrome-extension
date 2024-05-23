@@ -1,4 +1,4 @@
-# create-chrome-extension
+# build-chrome-extension
 ![Static Badge](https://img.shields.io/badge/manifest_version_3-blue?style=plastic&logo=chrome&logoColor=%23AA4477&logoSize=20&label=chrome%20extension)
 ![Static Badge](https://img.shields.io/badge/v1.0.1-maroon?style=plastic&logo=npm&logoColor=maroon&logoSize=20&label=version)
 ![Static Badge](https://img.shields.io/badge/MIT-green?style=plastic&logo=license&logoColor=green&label=license)
@@ -28,7 +28,7 @@ npx build-chrome-extension
 ```
 
 ## Contributing
-Interested in contributing to this project? You can log any issues or suggestion related to this library <a href="https://github.com/M2KDevelopments/create-chrome-extensionr/issues/new">here</a>
+Interested in contributing to this project? You can log any issues or suggestion related to this library <a href="https://github.com/M2KDevelopments/create-chrome-extension/issues/new">here</a>
 
 Read our contributing guide on getting started with contributing to the codebase
 
