@@ -141,6 +141,8 @@ async function done(answers) {
     } else {
         console.log('Framework was not chosen');
     }
+
+    console.log(chalk.yellowBright("Alright Happy Building!"));
 }
 
 // process actions

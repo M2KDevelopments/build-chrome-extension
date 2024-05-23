@@ -1,6 +1,6 @@
 # build-chrome-extension
 ![Static Badge](https://img.shields.io/badge/manifest_version_3-blue?style=plastic&logo=chrome&logoColor=%23AA4477&logoSize=20&label=chrome%20extension)
-![Static Badge](https://img.shields.io/badge/v1.0.1-maroon?style=plastic&logo=npm&logoColor=maroon&logoSize=20&label=version)
+![Static Badge](https://img.shields.io/badge/v1.0.2-maroon?style=plastic&logo=npm&logoColor=maroon&logoSize=20&label=version)
 ![Static Badge](https://img.shields.io/badge/MIT-green?style=plastic&logo=license&logoColor=green&label=license)
 ![Static Badge](https://img.shields.io/badge/m2kdevelopments-purple?style=plastic&logo=github&logoColor=purple&label=developer&link=https%3A%2F%2Fgithub.com%2Fm2kdevelopments)
 ![Static Badge](https://img.shields.io/badge/latest-blue?style=plastic&logo=react&logoColor=blue&label=reactjs&link=https%3A%2F%2Fgithub.com%2Fm2kdevelopments)
