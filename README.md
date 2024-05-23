@@ -1,5 +1,5 @@
 # create-chrome-extension
-![Static Badge](https://img.shields.io/badge/:badgeContent?style=flat&logo=npm&logoColor=%23AA4477&label=chrome%20extension)
+![Static Badge](https://img.shields.io/badge/any_text-you_like-blue?style=flat&logo=npm&logoColor=%23AA4477&label=chrome%20extension)
 
 
 ## Build Create Chrome Extension Template
