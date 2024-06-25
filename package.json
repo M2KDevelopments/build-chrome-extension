@@ -1,6 +1,6 @@
 {
   "name": "build-chrome-extension",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node Js CLI tool that auto generates the necessary files and manifest.json for the chrome extension you want to build.",
   "main": "index.js",
   "type": "module",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/M2KDevelopments/create-chrome-extension.git"
+    "url": "git+https://github.com/M2KDevelopments/build-chrome-extension.git"
   },
   "keywords": [
     "create",
