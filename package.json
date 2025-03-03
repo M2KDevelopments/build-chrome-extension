@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/M2KDevelopments/create-chrome-extension.git"
+    "url": "git+https://github.com/M2KDevelopments/build-chrome-extension.git"
   },
   "keywords": [
     "create",
@@ -22,7 +22,7 @@
     "m2k"
   ],
   "bin": {
-    "create-chrome-extension": "./index.js"
+    "build-chrome-extension": "./index.js"
   },
   "files": [
     "index.js",
@@ -32,9 +32,9 @@
   "author": "M2K Developments",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/M2KDevelopments/create-chrome-extension/issues"
+    "url": "https://github.com/M2KDevelopments/build-chrome-extension/issues"
   },
-  "homepage": "https://github.com/M2KDevelopments/create-chrome-extension#readme",
+  "homepage": "https://github.com/M2KDevelopments/build-chrome-extension#readme",
   "dependencies": {
     "axios": "^1.7.2",
     "chalk": "^5.3.0",

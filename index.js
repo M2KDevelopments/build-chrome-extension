@@ -31,8 +31,7 @@ program
 
 // Show Title
 console.log(chalk.yellow(figlet.textSync("Build Chrome Ext.", { horizontalLayout: "full" })));
-console.log('By', chalk.blueBright('M2K Developments'));
-
+console.log(chalk.yellowBright('BUILD CHROME EXTENSION.'), 'Let\'s Get Started!');
 
 // Execute shell commands
 function shellCMD(command) {
@@ -51,6 +50,7 @@ function nodeCMD(command, args) {
     return new Promise((resolve, reject) => {
         // https://nodejs.org/api/child_process.html#child_processspawncommand-args-options
         // https://stackoverflow.com/questions/68127183/how-to-get-the-output-of-command-executed-using-child-process-in-nodejs
+        // https://www.youtube.com/watch?v=C1v4MXGhpcM
         const child = spawn(command, args.split(" "), {
             shell: true,
             cwd: process.cwd(),
@@ -76,7 +76,10 @@ async function done(answers) {
     console.log(chalk.greenBright(`Building, ${answers.name}!`));
 
     // Stop if name was not provided
-    if (!answers.name) console.log(chalk.redBright("Please enter a name for you chrome extension"));
+    if (!answers.name.trim()) {
+        console.log(chalk.redBright("The chrome extension name was not provided."), chalk.yellowBright("my_extension"), chalk.redBright('will be used as a default name'));
+        answers.name = "my_extension";
+    }
 
     // Declare directory paths
     const folderName = answers.name.toLowerCase().replace(/\s/gmi, '-');

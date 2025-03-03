@@ -3,21 +3,21 @@ export const prompts = [
         "type": "input",
         "name": "name",
         "message": "Chrome Extension Name?",
-        "default": "m2kextension"
+        "default": "my_extension"
     },
     {
         "type": "input",
         "name": "description",
         "message": "Short description for your chrome extension?",
-        "default": "Hello world! First extension."
+        "default": "Hello world! My first extension."
     },
     {
         "type": "list",
         "name": "framework",
-        "message": "Choose an FrameWork:",
+        "message": "Choose a FrameWork:",
         "choices": [
-            "Vanilla HTML, CSS and JS",
             "Vite",
+            "Vanilla HTML, CSS and JS",
         ]
     },
     {

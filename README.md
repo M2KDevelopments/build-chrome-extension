@@ -28,7 +28,7 @@ npx build-chrome-extension
 ```
 
 ## Contributing
-Interested in contributing to this project? You can log any issues or suggestion related to this library <a href="https://github.com/M2KDevelopments/create-chrome-extension/issues/new">here</a>
+Interested in contributing to this project? You can log any issues or suggestion related to this library <a href="https://github.com/M2KDevelopments/build-chrome-extension/issues/new">here</a>
 
 Read our contributing guide on getting started with contributing to the codebase
 
