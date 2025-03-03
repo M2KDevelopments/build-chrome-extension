@@ -15,10 +15,14 @@
     "create",
     "chrome",
     "extension",
+    "build-chrome-extension",
+    "build chrome extension",
+    "create chrome extension",
     "react",
     "vite",
     "solid",
     "svelte",
+    "npm",
     "m2k"
   ],
   "bin": {
